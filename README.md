@@ -1,16 +1,47 @@
-# React + Vite
+# Mini Portafolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Portafolio personal hecho con React y Vite. Tiene cinco secciones: Inicio, Sobre mí, Habilidades, Proyectos y Contacto.
 
-Currently, two official plugins are available:
+## Requisitos e instalación
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Node 20.19+ o 22.12+.
 
-## React Compiler
+```bash
+npm install
+```
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Cómo ejecutarlo
 
-## Expanding the ESLint configuration
+```bash
+npm run dev
+```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Abre http://localhost:5173
+
+## Estructura de carpetas
+
+```
+src/
+  components/   Header, Footer, Layout, TarjetaProyecto, FormularioContacto
+  pages/        Inicio, SobreMi, Habilidades, Proyectos, Contacto
+  App.jsx       rutas
+  main.jsx      punto de entrada
+  index.css     estilos
+```
+
+## Rutas
+
+| Ruta | Muestra |
+|---|---|
+| `/` | Presentación y botón Explorar |
+| `/sobre-mi` | Estudios, intereses y metas |
+| `/habilidades` | Habilidades y herramientas |
+| `/proyectos` | Tarjetas de proyectos |
+| `/contacto` | Formulario con validación |
+
+## Dificultades y soluciones
+
+- Ejecuté `git init` en la carpeta equivocada y Git daba error. Lo resolví borrando ese `.git` y trabajando dentro de `mini-portafolio`.
+- `mkdir` con dos rutas falló en PowerShell. Lo resolví separándolas con coma.
+- El commit decía "nothing to commit" porque no había guardado los archivos. Lo resolví guardando todo antes del `git add`.
+- La app mostraba un error de importación porque faltaban los archivos de `src/pages`. Los creé y se resolvió.
