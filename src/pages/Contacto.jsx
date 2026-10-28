@@ -1,1 +1,12 @@
-export default function Contacto() { return <h1>Contacto</h1> }
+import FormularioContacto from '../components/FormularioContacto'
+
+function Contacto() {
+  return (
+    <section>
+      <h1>Contacto</h1>
+      <FormularioContacto />
+    </section>
+  )
+}
+
+export default Contacto
